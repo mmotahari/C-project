@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main() {
-  double c;
+  double c , f ;
  scanf("%lf",&c);
- printf("c is : %lf\n ", c );
+f= (c * 1.8) + 32;
+ printf("fahrenhit is : %lf\n ", f);
 
 };
+
