@@ -1,27 +1,38 @@
 #include <stdio.h> 
 
-double f2c (double f) {
-return (f - 32) * 0.55;
+double c2f(double c){
+    double f;
+    f = (c * 1.8) + 32;
+    return f;
 }
 
-double c2f (double c){
-    return (c * 1.8) + 32;
+double f2c(double f){
+    double c;
+    c = 0.55 * (f - 32);
+    return c ;
 }
 
-int main(){
-    double f ,c ;
-    int a;
-    scanf ("f2c 1 or c2f 2 ", &a);
-    if (a=1){
-    scanf("%lf/n",&f );
-    c = f2c (f);
-    printf("celsius is : %lf",c);
+int main() {
+    int ch;
+    double tem;
+    printf("1. Celsius to Fahrenheit\n");
+    printf("2. Fahrenheit to Celsius\n");
+    printf("Enter your choice (1 or 2)\n");
+    scanf("%d",&ch);
+    if (ch==1){
+        printf("Celsius : \n");
+        scanf("%lf",&tem);
+        tem = c2f(tem);
+        printf("Fahrenhei is : %f\n",tem);
     }
-    else {
-    scanf("%lf/n",&c );
-    f = c2f (c);
-    printf("fahrenhit is : %lf",f);   
+    else if (ch==2){
+        printf("Fahrenheit : \n");
+        scanf("%lf",&tem);
+        tem = f2c(tem);
+        printf("Celsius is : %f\n",tem) ;  
     }
-   
+    else{
+        printf("Invalid input");
 
+    }
 }
