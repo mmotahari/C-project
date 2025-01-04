@@ -1,24 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
-void genrateX(int n){
-    int x;
-    for (int i =0;i<n;i++){
-        x=rand() % 100;
-    }
-}
-
-void genrateY(int n){
-    int y;
-    for (int i =0;i<n;i++){
-        y=rand() % 100;
-    }
+double distance (double x , double y){
+    return sqrt(pow( x , 2) + pow ( y,2));
 }
 
 int main(){
-    int xs;
-    xs = genrateX(5);
-    for (int i = 0;i<5;i++){
-        printf("%d",xs);
-    }
+    double x , y , d ;
+    x = 3;
+    y = 4;
+    d = distance(x,y);
+    printf("d is %lf",d);
 }
