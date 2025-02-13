@@ -10,7 +10,7 @@ int is_inside_circle(float x,float y){
 }
 
 int main(){
-    int sample_size=100000;
+    int sample_size=10000000;
     int inside=0;
     for(int i=0;i<sample_size;i++){
         float x=get_random();
